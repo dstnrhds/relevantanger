@@ -1,6 +1,7 @@
 TEMPLATES
 ---------
 
+<<<<<<< HEAD
 I couldn't figure out which template controlled which bit of markup, but then I
 read https://www.drupal.org/node/223440#theme-debug and my mind is blown!
 
@@ -20,6 +21,8 @@ to this:
 TEMPLATE LOCATIONS
 ------------------
 
+=======
+>>>>>>> 7ac2e7ea2e3a668eebd93e029d65a42280aff5e7
 Drupal 7 contains the following template files which you can override and modify
 by copying them to your sub-theme.
 
@@ -38,17 +41,24 @@ Located in zen/templates:
   node.tpl.php
   region.tpl.php
   region--footer.tpl.php
+<<<<<<< HEAD
+=======
+  region--sidebar.tpl.php
+>>>>>>> 7ac2e7ea2e3a668eebd93e029d65a42280aff5e7
   region--no-wrapper.tpl.php
   block.tpl.php
   block--no-wrapper.tpl.php
   comment-wrapper.tpl.php
   comment.tpl.php
   user-picture.tpl.php
+<<<<<<< HEAD
   pane-header.tpl.php
   pane-messages.tpl.php
   pane-navigation.tpl.php
   panels-pane.tpl.php
   panels-pane--no-wrapper.tpl.php
+=======
+>>>>>>> 7ac2e7ea2e3a668eebd93e029d65a42280aff5e7
 
 Located in /modules/aggregator:
   aggregator-feed-source.tpl.php

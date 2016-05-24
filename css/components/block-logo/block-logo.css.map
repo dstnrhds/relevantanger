@@ -1,1 +1,0 @@
-{"version":3,"sources":["block-logo.css"],"names":[],"mappings":"AAAA;EACE,aAAa;CACd;;AAED;EACE,YAAY;EACZ,iBAAiB;CAClB","file":"components/block-logo/block-logo.css","sourcesContent":[".logo-block a {\n  font-size: 0;\n}\n\n.logo-block a:hover, .logo-block a:active {\n  color: none;\n  background: none;\n}\n"],"sourceRoot":"/source/"}
