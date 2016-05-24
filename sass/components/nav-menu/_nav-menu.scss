@@ -11,19 +11,32 @@
 %nav-menu {
 
   &__item {
-    list-style-image: image-url('nav-menu/leaf.svg');
-    list-style-type: square;
+    // list-style-image: image-url('nav-menu/leaf.svg');
+    // list-style-type: square;
+    list-style-type: none;
+    margin-top: 2em;
+
+    a {
+      width: 12em;
+      text-transform: uppercase;
+      font-size: 2em;
+      padding: .25em .5em;
+    }
 
     &.is-expanded,
     &--is-expanded {
-      list-style-image: image-url('nav-menu/expanded.svg');
-      list-style-type: circle;
+      // list-style-image: image-url('nav-menu/expanded.svg');
+      // list-style-type: circle;
+      list-style-type: none;
+
     }
 
     &.is-collapsed,
     &--is-collapsed {
-      list-style-image: image-url('nav-menu/collapsed.svg');
-      list-style-type: disc;
+      // list-style-image: image-url('nav-menu/collapsed.svg');
+      // list-style-type: disc;
+      list-style-type: none;
+
 
       @include rtl() {
         list-style-image: image-url('nav-menu/collapsed-rtl.svg');
@@ -35,6 +48,7 @@
     &.is-active,
     &--is-active {
       color: color(menu-active);
+      background: color(menu-active-bg);
     }
   }
 }

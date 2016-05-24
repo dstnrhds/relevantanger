@@ -18,6 +18,7 @@
 :link,
 %link {
   color: color(link);
+  text-decoration: none;
 }
 
 :visited {
@@ -26,11 +27,12 @@
 
 a:hover,
 a:focus {
-  // Add your styles.
+  color: color(white);
+  background: color(link);
 }
 
 a:active {
-  color: color(link-active);
+  color: color(white);
 
   @if support-for(ie, 10) {
     // Remove the gray background color from active links in IE 10.

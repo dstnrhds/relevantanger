@@ -23,7 +23,7 @@ $chroma: add-colors((
   white:                  #fff,
 
   blue:                   #0072b9,
-  red:                    #c00,
+  red:                    #dc143c,
   yellow:                 #fd0,
 ));
 
@@ -31,12 +31,12 @@ $chroma: add-colors((
 $chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
-  text:                   'black',
+  text:                   'red',
   text-bg:                'white',
 
-  link:                   'blue',
-  link-visited:           ('blue' darken 20%),
-  link-active:            'red',
+  link:                   'red',
+  link-visited:           ('red' darken 5%),
+  link-active:            'white',
 
   border:                 'grey-light',
 
@@ -56,7 +56,8 @@ $chroma: add-colors('functional', (
   mark-highlight:         'red',
   mark-bg:                'yellow',
 
-  menu-active:            'text',
+  menu-active:            'white',
+  menu-active-bg:         'red',
 
   preview-bg:             ('yellow' lighten 43%),
 

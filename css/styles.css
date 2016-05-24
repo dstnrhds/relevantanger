@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MomsTypewriter';
+  src: url("../fonts/Moms_typewriter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +12,7 @@
 html {
   font-size: 100%;
   line-height: 1.5em;
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: "MomsTypewriter", Courier, serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
@@ -20,7 +27,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #dc143c;
   background-color: #fff;
 }
 
@@ -62,15 +69,22 @@ template {
 }
 
 :link {
-  color: #0072b9;
+  color: #dc143c;
+  text-decoration: none;
 }
 
 :visited {
-  color: #003353;
+  color: #c51236;
+}
+
+a:hover,
+a:focus {
+  color: #fff;
+  background: #dc143c;
 }
 
 a:active {
-  color: #c00;
+  color: #fff;
   background-color: transparent;
 }
 
@@ -160,7 +174,7 @@ dfn {
 
 mark {
   background: #fd0;
-  color: #000;
+  color: #dc143c;
 }
 
 small {
@@ -219,7 +233,7 @@ dd {
 menu,
 ol,
 ul {
-  padding: 0 0 0 32px;
+  padding: 0;
 }
 
 [dir='rtl'] menu, [dir='rtl']
@@ -284,7 +298,7 @@ button,
   line-height: inherit;
   text-decoration: none;
   cursor: pointer;
-  color: #000;
+  color: #dc143c;
 }
 
 .button:hover, .button:focus, .button:active,
@@ -301,7 +315,7 @@ button:active,
 [type='reset']:active,
 [type='submit']:active {
   text-decoration: none;
-  color: #000;
+  color: #dc143c;
 }
 
 .button[disabled],
@@ -415,11 +429,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  border: #dc143c;
 }
 
 td,
 th {
-  padding: 0;
+  padding: .5em;
 }
 
 .layout-3col {
@@ -713,7 +728,7 @@ th {
 .autocomplete__list-item,
 #autocomplete li {
   background: #fff;
-  color: #000;
+  color: #dc143c;
   cursor: default;
   white-space: pre;
 }
@@ -731,6 +746,15 @@ th {
   background-image: url(../sass/components/autocomplete/throbber-active.gif);
 }
 
+.logo-block a {
+  font-size: 0;
+}
+
+.logo-block a:hover, .logo-block a:active {
+  color: none;
+  background: none;
+}
+
 .box {
   margin-bottom: 1.5rem;
   border: 5px solid #cccccc;
@@ -742,11 +766,11 @@ th {
 }
 
 .box:focus, .box:hover, .box.is-focus, .box--is-focus {
-  border-color: #000;
+  border-color: #dc143c;
 }
 
 .box--highlight {
-  border-color: #0072b9;
+  border-color: #dc143c;
 }
 
 .visually-hidden,
@@ -907,7 +931,7 @@ th {
 
 .form-item__required,
 .form-required {
-  color: #c00;
+  color: #dc143c;
 }
 
 .form-item__description,
@@ -966,7 +990,7 @@ label.option {
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
-  border: 1px solid #c00;
+  border: 1px solid #dc143c;
 }
 
 .form-table__sticky-header,
@@ -1077,11 +1101,12 @@ th .checkbox {
 }
 
 .header__site-name {
+  font-size: 200%;
   margin: 0;
 }
 
 .header__site-link:link, .header__site-link:visited {
-  color: #000;
+  color: #dc143c;
   text-decoration: none;
 }
 
@@ -1115,7 +1140,7 @@ html.js .js-hide {
 .highlight-mark,
 .new,
 .update {
-  color: #c00;
+  color: #dc143c;
   background-color: transparent;
 }
 
@@ -1206,7 +1231,7 @@ span.field-label {
 .messages__highlight,
 .messages--error .error,
 .messages.error .error {
-  color: #000;
+  color: #dc143c;
 }
 
 .messages__list {
@@ -1231,15 +1256,15 @@ span.field-label {
 .messages.warning,
 .warning {
   background-color: #fffce6;
-  color: #000;
+  color: #dc143c;
 }
 
 .messages--error-color,
 .messages--error,
 .messages.error,
 .error {
-  background-color: #fff0f0;
-  color: #c00;
+  background-color: white;
+  color: #dc143c;
 }
 
 .messages--warning,
@@ -1253,11 +1278,11 @@ span.field-label {
 
 .messages--error,
 .messages.error {
-  border-color: #c00;
+  border-color: #dc143c;
 }
 
 .messages--error path, .messages.error path {
-  fill: #c00;
+  fill: #dc143c;
 }
 
 .more-link,
@@ -1287,22 +1312,27 @@ span.field-label {
 
 .nav-menu__item,
 .menu__item {
-  list-style-image: url(../sass/components/nav-menu/leaf.svg);
-  list-style-type: square;
+  list-style-type: none;
+  margin-top: 2em;
+}
+
+.nav-menu__item a, .menu__item a {
+  width: 12em;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: .25em .5em;
 }
 
 .nav-menu__item.is-expanded, .nav-menu__item--is-expanded,
 .is-expanded.menu__item,
 .menu__item.is-expanded {
-  list-style-image: url(../sass/components/nav-menu/expanded.svg);
-  list-style-type: circle;
+  list-style-type: none;
 }
 
 .nav-menu__item.is-collapsed, .nav-menu__item--is-collapsed,
 .is-collapsed.menu__item,
 .menu__item.is-collapsed {
-  list-style-image: url(../sass/components/nav-menu/collapsed.svg);
-  list-style-type: disc;
+  list-style-type: none;
 }
 
 [dir='rtl'] .nav-menu__item.is-collapsed, [dir='rtl'] .nav-menu__item--is-collapsed,
@@ -1313,7 +1343,8 @@ span.field-label {
 
 .nav-menu__link.is-active, .nav-menu__link--is-active,
 .menu a.active {
-  color: #000;
+  color: #fff;
+  background: #dc143c;
 }
 
 .navbar,
@@ -1692,7 +1723,7 @@ tr.drag-previous {
   -webkit-transition: color .3s, background .3s, border .3s;
   transition: color .3s, background .3s, border .3s;
   text-shadow: #fff 0 1px 0;
-  color: #000;
+  color: #dc143c;
   background: #dddddd;
   letter-spacing: 1px;
 }
@@ -1762,7 +1793,7 @@ tr.drag-previous {
 }
 
 .watermark {
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   display: block;
@@ -1776,3 +1807,5 @@ tr.drag-previous {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;
 }
+
+/*# sourceMappingURL=styles.css.map */

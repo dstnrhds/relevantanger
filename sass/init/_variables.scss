@@ -77,6 +77,9 @@ $helvetica:       Helvetica, Arial, 'Nimbus Sans L', sans-serif;
 $arial:           Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 $impact:          Impact, 'Arial Narrow', Helvetica, sans-serif;
 
+// Custom font stacks.
+$typewriter:      'MomsTypewriter', Courier, serif;
+
 // Monospace font stacks.
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
@@ -86,13 +89,13 @@ $menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier Ne
 // typeface() mixin.
 $typefaces: (
   body: (
-    font-family: $verdana,
+    font-family: $typewriter,
   ),
   monospace: (
     font-family: $menlo,
   ),
   compact: (
-    font-family: $impact,
+    font-family: $menlo,
     weight: bold,
     case: uppercase,
     // We could also specify the following property:
