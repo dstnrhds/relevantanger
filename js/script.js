@@ -10,7 +10,6 @@
 // wrapping it with an "anonymous closure". See:
 // - https://drupal.org/node/1446420
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
-<<<<<<< HEAD
 (function ($, Drupal, window, document) {
 
   'use strict';
@@ -23,19 +22,5 @@
 
     }
   };
-=======
-(function ($, Drupal, window, document, undefined) {
-
-
-// To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
-  attach: function(context, settings) {
-
-    // Place your code here.
-
-  }
-};
-
->>>>>>> 7ac2e7ea2e3a668eebd93e029d65a42280aff5e7
 
 })(jQuery, Drupal, this, this.document);
